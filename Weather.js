@@ -5,23 +5,7 @@ import {Ionicons} from "@expo/vector-icons"
 import {MaterialCommunityIcons} from "@expo/vector-icons"
 import PropTypes from 'prop-types'
 
-// export default class Weather extends Component {
-//   render() {
-//     return (
-//         <LinearGradient colors={["#00C6FB", "#005BEA"]} style={styles.container}>
-//           <View style={styles.upper}>
-//             <Ionicons color="white" size={144} name="ios-rainy"/>
-//             <Text style={styles.temp}>35°</Text>
-//           </View>
-//           <View style={styles.lower}>
-//             <Text style={styles.title}>Raining cats and dogs</Text>
-//             <Text style={styles.subtitle}>For more info look out the window</Text>
-//           </View>
-//         </LinearGradient>
-//     )
-//   }
-// }
-
+// Objects for different weather types
 const weatherCases = {
   Rain: {
     colors: ['#006CFB', '#005BEA'],
@@ -71,8 +55,9 @@ const weatherCases = {
     subtitle: "It is the dim haze of mystery that adds enchantment to pursuit",
     icon: "weather-hail"
   },
-}
+};
 
+// Receives props from App.js and shows Temp info
 Weather = ({weatherName, temp}) => {
   console.log("This is the weatherName", weatherName)
   return (
@@ -89,6 +74,7 @@ Weather = ({weatherName, temp}) => {
   )
 }
 
+// What type of props should id recieve?
 Weather.propTypes = {
   temp: PropTypes.number.isRequired,
   weatherName: PropTypes.string.isRequired
@@ -96,6 +82,7 @@ Weather.propTypes = {
 
 export default Weather
 
+// StyleSheet Component
 const styles = StyleSheet.create({
   container: {
     flex: 1

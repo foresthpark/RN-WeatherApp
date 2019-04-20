@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, StatusBar} from 'react-native';
 import Weather from './Weather'
 
+// OpenWeatherMap API Key
 const API_KEY = "150c7c0b9d3f8bac3bec3d93a574cd94";
 
 export default class App extends React.Component {
@@ -13,6 +14,7 @@ export default class App extends React.Component {
     cityname: null
   };
 
+  // Check Geolocation of user
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(position => {
           this.getWeather(position.coords.latitude, position.coords.longitude)
@@ -25,6 +27,7 @@ export default class App extends React.Component {
     );
   }
 
+  // Fetches weather API from OpenWeatherMap
   getWeather = (lat, long) => {
     fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=${API_KEY}`)
         .then(response => response.json())
