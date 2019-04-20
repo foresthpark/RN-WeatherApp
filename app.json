@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "The Awesomenst Weather App",
+    "name": "The Awesomest Weather App",
     "slug": "RN-WeatherApp",
     "privacy": "public",
     "sdkVersion": "32.0.0",
@@ -10,7 +10,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icons8-rainbow-100.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -24,6 +24,11 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.lingonsaft.myapp",
+      "versionCode": 1.0,
+      "icon": "./assets/icons8-rainbow-100.png"
     }
   }
 }
