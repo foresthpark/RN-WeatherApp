@@ -5,3 +5,8 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
+my-release-key.keystore
+package.json
+package-lock.jsno
+.wathmanconfig
+./components
