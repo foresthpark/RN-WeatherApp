@@ -1,1 +1,1 @@
-# RN-WethaerApp
+# React Native Weather App
